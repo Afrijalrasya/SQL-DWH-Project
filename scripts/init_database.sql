@@ -1,4 +1,12 @@
 */
+  ================================
+  Membuat Database dan Skema
+  ================================
+  Tujuan :
+    Script ini bertujuan untuk membuat database baru dengan nama 'DataWarehouse' setelah mengecek jika databasenya sudah ada.
+    Jika terdapat database dengan nama yang sama maka akan dihapus dan dibuat ulang.
+  
+*/
   
 Use master;
 GO
@@ -7,7 +15,7 @@ GO
 CREATE DATABASE DataWarehouse;
 IF EXIST (SELECT 1 FROM sys.databases WHERE name = 'Datawarehouse')
   BEGIN
-    ALTER DATBASE DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    ALTER DATABASE DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
     DROP DATABASE DataWarehouse;
   END;
 GO
