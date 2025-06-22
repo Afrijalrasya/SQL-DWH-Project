@@ -4,7 +4,8 @@
   ================================
   Tujuan :
     Script ini bertujuan untuk membuat database baru dengan nama 'DataWarehouse' setelah mengecek jika databasenya sudah ada.
-    Jika terdapat database dengan nama yang sama maka akan dihapus dan dibuat ulang.
+    Jika terdapat database dengan nama yang sama maka akan dihapus dan dibuat ulang. Script ini menyiapkan tiga schema database,
+    yaitu:'bronze', 'silver', dan 'gold'.
   
 */
   
