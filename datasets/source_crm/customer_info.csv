@@ -1,0 +1,34 @@
+## 📁 Dataset: `customer_info.csv`
+
+### 📄 Deskripsi
+File `customer_info.csv` berisi data pelanggan yang digunakan untuk keperluan analisis segmentasi pelanggan dan
+pelacakan riwayat interaksi. Dataset ini tidak memuat informasi sensitif secara langsung, hanya metadata pelanggan dasar.
+
+---
+  
+### 📊 Struktur Kolom
+
+| No | Kolom               | Tipe Data         | Deskripsi                                                                |
+|----|---------------------|-------------------|--------------------------------------------------------------------------|
+| 1  | `cst_id`            | String / Integer  | ID pelanggan eksternal. Bisa berupa kode dari sistem lain                |
+| 2  | `cst_key`           | Integer           | Surrogate key untuk pelanggan. Nilai unik dan biasanya auto-increment.   |
+| 3  | `cst_firstname`     | String            | Nama depan pelanggan.                                                    |
+| 4  | `cst_lastname`      | String            | Nama belakang pelanggan.                                                 |
+| 5  | `cst_marital_status`| String (1 huruf)  | Status pernikahan: <br>`S` = Single, `M` = Married                       |
+| 6  | `cst_gndr`          | String (1 huruf)  | Jenis kelamin: <br>`M` = Male, `F` = Female.                             |
+| 7  | `cst_create_date`   | Date (YYYY-MM-DD) | Tanggal pembuatan data pelanggan di sistem.                              |
+
+---
+
+### 🧾 Contoh Data
+
+| cst_id | cst_key       | cst_firstname | cst_lastname | cst_marital_status  | cst_gndr | cst_create_date  |
+|--------|---------------|---------------|--------------|---------------------|----------|------------------|
+| 11000  | AW00011000    | Jon           | Yang         | M                   | M        | 2021-03-15       |
+| 11002  | AW00011002    | Eugene        | Huang        | S                   | M        | 2021-06-22       |
+
+---
+
+### 📌 Catatan
+- Dataset tidak disertakan dalam repositori. Silakan hubungi maintainer jika Anda membutuhkan akses.
+- File ini hanya digunakan untuk keperluan dummy project.
