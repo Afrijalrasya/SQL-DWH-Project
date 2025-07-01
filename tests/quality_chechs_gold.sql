@@ -3,8 +3,8 @@
 Quality Checks
 ===============================================================================
 Tujuan script:
-    - Skrip ini melakukan pemeriksaan kualitas untuk memvalidasi integritas, konsistensi,
-    - dan akurasi Gold layer. Pemeriksaan ini memastikan:
+    - Script ini melakukan pemeriksaan kualitas untuk memvalidasi integritas, konsistensi,
+      dan akurasi Gold layer. Pemeriksaan ini memastikan:
     - Keunikan surrogate key(key pengganti) di dalam tabel dimensi.
     - Integritas referensial antara tabel fakta dan tabel dimensi.
     - Validasi hubungan dalam model data untuk tujuan analisis.
