@@ -78,28 +78,30 @@ Insight ini bertujuan mendukung pengambilan keputusan strategis oleh pemangku ke
 
 ---
 
-## 📂 Struktur Repositori
-
+## 📂 Repository Structure
+```
 data-warehouse-project/
 │
-├── datasets/ # Dataset mentah yang digunakan (ERP dan CRM)
+├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
 │
-├── docs/ # Dokumentasi proyek dan arsitektur
-│ ├── etl.drawio # Diagram ETL dengan berbagai metode dan teknik
-│ ├── data_architecture.drawio # Diagram arsitektur proyek
-│ ├── data_catalog.md # Katalog dataset dan deskripsi field
-│ ├── data_flow.drawio # Diagram alur data
-│ ├── data_models.drawio # Diagram pemodelan data (star schema)
-│ ├── naming-conventions.md # Panduan penamaan untuk tabel, kolom, dan file
+├── docs/                               # Project documentation and architecture details
+│   ├── etl.drawio                      # Draw.io file shows all different techniquies and methods of ETL
+│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
+│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
+│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
+│   ├── data_models.drawio              # Draw.io file for data models (star schema)
+│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
 │
-├── scripts/ # Skrip SQL untuk ETL dan transformasi
-│ ├── bronze/ # Skrip ekstraksi dan pemuatan data mentah
-│ ├── silver/ # Skrip pembersihan dan transformasi
-│ ├── gold/ # Skrip untuk model analitik
+├── scripts/                            # SQL scripts for ETL and transformations
+│   ├── bronze/                         # Scripts for extracting and loading raw data
+│   ├── silver/                         # Scripts for cleaning and transforming data
+│   ├── gold/                           # Scripts for creating analytical models
 │
-├── tests/ # Skrip pengujian dan file validasi kualitas data
+├── tests/                              # Test scripts and quality files
 │
-├── README.md # Ringkasan dan petunjuk proyek
-├── LICENSE # Informasi lisensi repositori
-├── .gitignore # File dan folder yang diabaikan Git
-└── requirements.txt # Dependensi yang dibutuhkan proyek
+├── README.md                           # Project overview and instructions
+├── LICENSE                             # License information for the repository
+├── .gitignore                          # Files and directories to be ignored by Git
+└── requirements.txt                    # Dependencies and requirements for the project
+```
+---
