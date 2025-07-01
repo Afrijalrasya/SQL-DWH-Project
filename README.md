@@ -1,63 +1,105 @@
-# Data Warehouse and Analytics Project
+# Proyek Data Warehouse dan Analitik
 
-Welcome to the **Data Warehouse and Analytics Project** repository! 🚀  
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
+Selamat datang di repositori **Data Warehouse and Analytics Project**! 🚀  
+Proyek ini mendemonstrasikan solusi lengkap untuk data warehousing dan analitik — mulai dari membangun gudang data hingga menghasilkan insight yang dapat ditindaklanjuti. Dirancang sebagai proyek portofolio, proyek ini menampilkan praktik terbaik industri dalam data engineering dan analitik.
 
 ---
-## 🏗️ Data Architecture
 
-The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
+## 🏗️ Arsitektur Data
+
+Arsitektur data proyek ini mengikuti pendekatan Medallion Architecture dengan tiga lapisan: **Bronze**, **Silver**, dan **Gold**.
 ![Data Architecture](docs/data_architecture.png)
 
-1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
-2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
-3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
+1. **Bronze Layer**: Menyimpan data mentah langsung dari sistem sumber. Data diambil dari file CSV dan dimasukkan ke dalam SQL Server Database.
+2. **Silver Layer**: Lapisan ini mencakup proses pembersihan data (cleansing), standarisasi, dan normalisasi sebelum dianalisis.
+3. **Gold Layer**: Menyimpan data yang siap pakai secara bisnis, dimodelkan dalam bentuk *star schema* untuk keperluan pelaporan dan analisis.
 
 ---
-## 📖 Project Overview
 
-This project involves:
+## 📖 Ringkasan Proyek
 
-1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
-2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
-3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
-4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
+Proyek ini mencakup:
 
-🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
-- SQL Development
-- Data Architect
+1. **Arsitektur Data**: Mendesain data warehouse modern menggunakan Medallion Architecture (**Bronze**, **Silver**, **Gold**).
+2. **ETL Pipelines**: Proses ekstraksi, transformasi, dan pemuatan data dari sistem sumber ke dalam warehouse.
+3. **Pemodelan Data**: Mengembangkan tabel fakta dan dimensi yang dioptimalkan untuk kueri analitik.
+4. **Analitik & Pelaporan**: Membangun laporan dan dasbor berbasis SQL untuk menghasilkan insight yang dapat ditindaklanjuti.
+
+🎯 Repositori ini sangat bermanfaat untuk profesional dan mahasiswa yang ingin menampilkan keahlian dalam:
+- Pengembangan SQL
+- Arsitektur Data
 - Data Engineering  
-- ETL Pipeline Developer  
-- Data Modeling  
-- Data Analytics  
+- Pengembangan Pipeline ETL  
+- Pemodelan Data  
+- Analitik Data  
 
 ---
 
-## 🛠️ Important Links & Tools:
+## 🛠️ Tautan & Alat Penting
 
-Everything is for Free!
-- **[Datasets](datasets/):** Access to the project dataset (csv files).
-- **[SQL Server Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads):** Lightweight server for hosting your SQL database.
-- **[SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16):** GUI for managing and interacting with databases.
-- **[Git Repository](https://github.com/):** Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
-- **[DrawIO](https://www.drawio.com/):** Design data architecture, models, flows, and diagrams.
-- **[Notion](https://www.notion.com/):** All-in-one tool for project management and organization.
-- **[Notion Project Steps](https://thankful-pangolin-2ca.notion.site/SQL-Data-Warehouse-Project-16ed041640ef80489667cfe2f380b269?pvs=4):** Access to All Project Phases and Tasks.
+Semua sumber daya GRATIS!
+- **[Datasets](datasets/):** Akses ke dataset proyek (file CSV).
+- **[SQL Server Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads):** Server ringan untuk menjalankan database SQL.
+- **[SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16):** Antarmuka GUI untuk mengelola database.
+- **[Git Repository](https://github.com/):** Gunakan GitHub untuk menyimpan, versi, dan kolaborasi kode.
+- **[DrawIO](https://www.drawio.com/):** Mendesain arsitektur data, model, alur ETL, dan diagram lainnya.
+- **[Notion Template](https://www.notion.com/templates/sql-data-warehouse-project):** Template proyek di Notion.
+- **[Langkah-Langkah Proyek di Notion](https://thankful-pangolin-2ca.notion.site/SQL-Data-Warehouse-Project-16ed041640ef80489667cfe2f380b269?pvs=4):** Daftar lengkap fase dan tugas proyek.
 
 ---
 
-## 🚀 Project Requirements
+## 🚀 Kebutuhan Proyek
 
-### Building the Data Warehouse (Data Engineering)
+### Membangun Data Warehouse (Data Engineering)
 
-#### Objective
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
+#### Tujuan
+Mengembangkan data warehouse modern menggunakan SQL Server untuk mengonsolidasikan data penjualan, sehingga dapat dilakukan pelaporan dan pengambilan keputusan berbasis data.
 
-#### Specifications
-- **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
-- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
-- **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
-- **Scope**: Focus on the latest dataset only; historization of data is not required.
-- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+#### Spesifikasi
+- **Sumber Data**: Data diimpor dari dua sistem sumber (ERP dan CRM) dalam bentuk file CSV.
+- **Kualitas Data**: Melakukan pembersihan dan perbaikan kualitas data sebelum dianalisis.
+- **Integrasi**: Menggabungkan kedua sumber menjadi satu model data yang mudah digunakan untuk keperluan analitik.
+- **Ruang Lingkup**: Fokus pada dataset terbaru saja, tidak mencakup historisasi data.
+- **Dokumentasi**: Menyediakan dokumentasi model data secara jelas untuk mendukung kebutuhan tim bisnis dan analitik.
 
+---
 
+### BI: Analitik & Pelaporan (Data Analysis)
+
+#### Tujuan
+Mengembangkan analitik berbasis SQL untuk memberikan insight yang mendalam terhadap:
+- **Perilaku Pelanggan**
+- **Performa Produk**
+- **Tren Penjualan**
+
+Insight ini bertujuan mendukung pengambilan keputusan strategis oleh pemangku kepentingan.
+
+📄 Selengkapnya bisa dilihat di [docs/requirements.md](docs/requirements.md)
+
+---
+
+## 📂 Struktur Repositori
+
+data-warehouse-project/
+│
+├── datasets/ # Dataset mentah yang digunakan (ERP dan CRM)
+│
+├── docs/ # Dokumentasi proyek dan arsitektur
+│ ├── etl.drawio # Diagram ETL dengan berbagai metode dan teknik
+│ ├── data_architecture.drawio # Diagram arsitektur proyek
+│ ├── data_catalog.md # Katalog dataset dan deskripsi field
+│ ├── data_flow.drawio # Diagram alur data
+│ ├── data_models.drawio # Diagram pemodelan data (star schema)
+│ ├── naming-conventions.md # Panduan penamaan untuk tabel, kolom, dan file
+│
+├── scripts/ # Skrip SQL untuk ETL dan transformasi
+│ ├── bronze/ # Skrip ekstraksi dan pemuatan data mentah
+│ ├── silver/ # Skrip pembersihan dan transformasi
+│ ├── gold/ # Skrip untuk model analitik
+│
+├── tests/ # Skrip pengujian dan file validasi kualitas data
+│
+├── README.md # Ringkasan dan petunjuk proyek
+├── LICENSE # Informasi lisensi repositori
+├── .gitignore # File dan folder yang diabaikan Git
+└── requirements.txt # Dependensi yang dibutuhkan proyek
