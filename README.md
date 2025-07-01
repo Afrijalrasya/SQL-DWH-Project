@@ -42,7 +42,6 @@ Semua sumber daya GRATIS!
 - **[SQL Server Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads):** Server ringan untuk menjalankan database SQL.
 - **[SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16):** Antarmuka GUI untuk mengelola database.
 - **[DrawIO](https://www.drawio.com/):** Mendesain arsitektur data, model, alur ETL, dan diagram lainnya.
-- **[Notion Template](https://www.notion.com/templates/sql-data-warehouse-project):** Template proyek di Notion.
 ---
 
 ## 🚀 Kebutuhan Proyek
