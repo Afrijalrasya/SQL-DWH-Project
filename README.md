@@ -57,23 +57,7 @@ Mengembangkan data warehouse modern menggunakan SQL Server untuk mengonsolidasik
 - **Integrasi**: Menggabungkan kedua sumber menjadi satu model data yang mudah digunakan untuk keperluan analitik.
 - **Ruang Lingkup**: Fokus pada dataset terbaru saja, tidak mencakup historisasi data.
 - **Dokumentasi**: Menyediakan dokumentasi model data secara jelas untuk mendukung kebutuhan tim bisnis dan analitik.
-
----
-
-### BI: Analitik & Pelaporan (Data Analysis)
-
-#### Tujuan
-Mengembangkan analitik berbasis SQL untuk memberikan insight yang mendalam terhadap:
-- **Perilaku Pelanggan**
-- **Performa Produk**
-- **Tren Penjualan**
-
-Insight ini bertujuan mendukung pengambilan keputusan strategis oleh pemangku kepentingan.
-
-📄 Selengkapnya bisa dilihat di [docs/requirements.md](docs/requirements.md)
-
----
-
+--
 ## 📂 Repository Structure
 ```
 data-warehouse-project/
