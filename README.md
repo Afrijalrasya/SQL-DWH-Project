@@ -40,7 +40,7 @@ Semua sumber daya GRATIS!
 
 ## 🚀 Spesifikasi Proyek
 
-### Membangun Data Warehouse =
+### Membangun mini Data Warehouse 
 
 #### Tujuan
 Mengembangkan data warehouse skala kecil menggunakan SQL Server untuk mengonsolidasikan data penjualan, sehingga dapat dilakukan pelaporan dan pengambilan keputusan berbasis data.
