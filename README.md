@@ -1,7 +1,7 @@
-# Proyek Data Warehouse dan Analitik
+# Proyek Data Warehouse
 
-Selamat datang di repositori **Data Warehouse and Analytics Project**! 🚀  
-Proyek ini mendemonstrasikan solusi lengkap untuk data warehousing dan analitik — mulai dari membangun gudang data hingga menghasilkan insight yang dapat ditindaklanjuti. Dirancang sebagai proyek portofolio, proyek ini menampilkan praktik terbaik industri dalam data engineering dan analitik.
+Selamat datang di repositori **Data Warehouse**! 🚀  
+Proyek ini merupakan upaya pembelajaran saya dalam memahami konsep dan implementasi dasar **data warehousing**, mulai dari membangun gudang data sederhana untuk menghasilkan insight awal dari data. Proyek ini dibuat sebagai bagian dari portofolio pribadi, dengan mengacu pada praktik umum di bidang **data engineering** dan **analitik**.
 
 ---
 
@@ -22,7 +22,7 @@ Proyek ini mencakup:
 
 1. **Arsitektur Data**: Mendesain data warehouse modern menggunakan Medallion Architecture (**Bronze**, **Silver**, **Gold**).
 2. **ETL Pipelines**: Proses ekstraksi, transformasi, dan pemuatan data dari sistem sumber ke dalam warehouse.
-3. **Pemodelan Data**: Mengembangkan tabel fakta dan dimensi yang dioptimalkan untuk kueri analitik.
+3. **Pemodelan Data**: Mengembangkan tabel fakta dan dimensi yang dioptimalkan untuk Query analitik.
 4. **Analitik & Pelaporan**: Membangun laporan dan dasbor berbasis SQL untuk menghasilkan insight yang dapat ditindaklanjuti.
 
 🎯 Repositori ini sangat bermanfaat untuk profesional dan mahasiswa yang ingin menampilkan keahlian dalam:
