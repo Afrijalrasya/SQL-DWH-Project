@@ -27,14 +27,6 @@ Proyek ini mencakup:
 
    [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/afrijalrasya/SQL-data-analytics-project)
 
-🎯 Repositori ini sangat bermanfaat untuk profesional dan mahasiswa yang ingin menampilkan keahlian dalam:
-- Pengembangan SQL
-- Arsitektur Data
-- Data Engineering  
-- Pengembangan Pipeline ETL  
-- Pemodelan Data  
-- Analitik Data  
-
 ---
 
 ## 🛠️ Tautan & Alat Penting
@@ -48,10 +40,10 @@ Semua sumber daya GRATIS!
 
 ## 🚀 Spesifikasi Proyek
 
-### Membangun Data Warehouse skala kecil
+### Membangun Data Warehouse =
 
 #### Tujuan
-Mengembangkan data warehouse modern menggunakan SQL Server untuk mengonsolidasikan data penjualan, sehingga dapat dilakukan pelaporan dan pengambilan keputusan berbasis data.
+Mengembangkan data warehouse skala kecil menggunakan SQL Server untuk mengonsolidasikan data penjualan, sehingga dapat dilakukan pelaporan dan pengambilan keputusan berbasis data.
 
 #### Spesifikasi
 - **Sumber Data**: Data diimpor dari dua sistem sumber (ERP dan CRM) dalam bentuk file CSV.
