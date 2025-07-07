@@ -62,26 +62,27 @@ Mengembangkan data warehouse modern menggunakan SQL Server untuk mengonsolidasik
 ```
 data-warehouse-project/
 │
-├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
+├── datasets/                           # Dataset mentah yang digunakan dalam proyek (data ERP dan CRM)
 │
-├── docs/                               # Project documentation and architecture details
-│   ├── etl.drawio                      # Draw.io file shows all different techniquies and methods of ETL
-│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
-│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
-│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
-│   ├── data_models.drawio              # Draw.io file for data models (star schema)
-│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
+├── docs/                               # Dokumentasi proyek dan detail arsitektur
+│   ├── etl.drawio                      # File Draw.io yang menampilkan berbagai teknik dan metode ETL
+│   ├── data_architecture.drawio        # File Draw.io yang menggambarkan arsitektur proyek
+│   ├── data_catalog.md                 # Katalog dataset, termasuk deskripsi field dan metadata
+│   ├── data_flow.drawio                # Diagram alur data dalam format Draw.io
+│   ├── data_models.drawio              # File Draw.io untuk model data (star schema)
+│   ├── naming-conventions.md           # Panduan penamaan yang konsisten untuk tabel, kolom, dan file
 │
-├── scripts/                            # SQL scripts for ETL and transformations
-│   ├── bronze/                         # Scripts for extracting and loading raw data
-│   ├── silver/                         # Scripts for cleaning and transforming data
-│   ├── gold/                           # Scripts for creating analytical models
+├── scripts/                            # Skrip SQL untuk proses ETL dan transformasi
+│   ├── bronze/                         # Skrip untuk ekstraksi dan pemuatan data mentah
+│   ├── silver/                         # Skrip untuk pembersihan dan transformasi data
+│   ├── gold/                           # Skrip untuk membangun model analitik
 │
-├── tests/                              # Test scripts and quality files
+├── tests/                              # Skrip pengujian dan file pengecekan kualitas data
 │
-├── README.md                           # Project overview and instructions
-├── LICENSE                             # License information for the repository
-├── .gitignore                          # Files and directories to be ignored by Git
-└── requirements.txt                    # Dependencies and requirements for the project
+├── README.md                           # Ringkasan proyek dan panduan penggunaan
+├── LICENSE                             # Informasi lisensi untuk repositori ini
+├── .gitignore                          # File dan direktori yang diabaikan oleh Git
+└── requirements.txt                    # Daftar dependensi dan kebutuhan proyek
+
 ```
 ---
