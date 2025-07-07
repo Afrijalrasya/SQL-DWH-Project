@@ -46,9 +46,9 @@ Semua sumber daya GRATIS!
 - **[DrawIO](https://www.drawio.com/):** Mendesain arsitektur data, model, alur ETL, dan diagram lainnya.
 ---
 
-## 🚀 Kebutuhan Proyek
+## 🚀 Spesifikasi Proyek
 
-### Membangun Data Warehouse (Data Engineering)
+### Membangun Data Warehouse skala kecil
 
 #### Tujuan
 Mengembangkan data warehouse modern menggunakan SQL Server untuk mengonsolidasikan data penjualan, sehingga dapat dilakukan pelaporan dan pengambilan keputusan berbasis data.
