@@ -23,7 +23,7 @@ Proyek ini mencakup:
 1. **Arsitektur Data**: Mendesain data warehouse modern menggunakan Medallion Architecture (**Bronze**, **Silver**, **Gold**).
 2. **ETL Pipelines**: Proses ekstraksi, transformasi, dan pemuatan data dari sistem sumber ke dalam warehouse.
 3. **Pemodelan Data**: Mengembangkan tabel fakta dan dimensi yang dioptimalkan untuk Query analitik.
-4. **Analitik & Pelaporan**: Membangun laporan dan dasbor berbasis SQL untuk menghasilkan insight yang dapat ditindaklanjuti.
+4. **Analitik & Pelaporan**: Repositori lanjutan untuk analitik dan laporan (https://github.com/Afrijalrasya/SQL-data-analytics-project)
 
 🎯 Repositori ini sangat bermanfaat untuk profesional dan mahasiswa yang ingin menampilkan keahlian dalam:
 - Pengembangan SQL
@@ -81,8 +81,6 @@ data-warehouse-project/
 │
 ├── README.md                           # Ringkasan proyek dan panduan penggunaan
 ├── LICENSE                             # Informasi lisensi untuk repositori ini
-├── .gitignore                          # File dan direktori yang diabaikan oleh Git
-└── requirements.txt                    # Daftar dependensi dan kebutuhan proyek
 
 ```
 ---
