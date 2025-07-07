@@ -1,81 +1,82 @@
 # **Naming Conventions**
 
-This document outlines the naming conventions used for schemas, tables, views, columns, and other objects in the data warehouse.
+Dokumen ini menjelaskan standar penamaan (naming convention) yang digunakan untuk skema, tabel, view, kolom, dan objek lainnya dalam data warehouse.
 
-## **Table of Contents**
+## **Daftar Isi**
 
-1. [General Principles](#general-principles)
-2. [Table Naming Conventions](#table-naming-conventions)
-   - [Bronze Rules](#bronze-rules)
-   - [Silver Rules](#silver-rules)
-   - [Gold Rules](#gold-rules)
-3. [Column Naming Conventions](#column-naming-conventions)
-   - [Surrogate Keys](#surrogate-keys)
-   - [Technical Columns](#technical-columns)
-4. [Stored Procedure](#stored-procedure-naming-conventions)
+1. [Prinsip Umum](#prinsip-umum)
+2. [Standar Penamaan Tabel](#standar-penamaan-tabel)
+   - [Aturan Bronze](#aturan-bronze)
+   - [Aturan Silver](#aturan-silver)
+   - [Aturan Gold](#aturan-gold)
+3. [Standar Penamaan Kolom](#standar-penamaan-kolom)
+   - [Surrogate Key](#surrogate-key)
+   - [Kolom Teknis](#kolom-teknis)
+4. [Stored Procedure](#stored-procedure)
+
 ---
 
-## **General Principles**
+## **Prinsip Umum**
 
-- **Naming Conventions**: Use snake_case, with lowercase letters and underscores (`_`) to separate words.
-- **Language**: Use English for all names.
-- **Avoid Reserved Words**: Do not use SQL reserved words as object names.
+- **Format Penamaan**: Gunakan `snake_case`, dengan huruf kecil dan pemisah garis bawah (`_`) antar kata.
+- **Bahasa**: Gunakan Bahasa Inggris untuk semua nama.
+- **Hindari Kata Terlarang**: Jangan gunakan kata-kata yang termasuk reserved word dalam SQL sebagai nama objek.
 
-## **Table Naming Conventions**
+## **Standar Penamaan Tabel**
 
-### **Bronze Rules**
-- All names must start with the source system name, and table names must match their original names without renaming.
+### **Aturan Bronze**
+- Nama tabel harus diawali dengan nama sistem sumber, dan nama tabel mengikuti nama asli dari sumber tanpa diubah.
 - **`<sourcesystem>_<entity>`**  
-  - `<sourcesystem>`: Name of the source system (e.g., `crm`, `erp`).  
-  - `<entity>`: Exact table name from the source system.  
-  - Example: `crm_customer_info` → Customer information from the CRM system.
+  - `<sourcesystem>`: Nama sistem sumber (contoh: `crm`, `erp`)  
+  - `<entity>`: Nama tabel asli dari sistem sumber  
+  - Contoh: `crm_customer_info` → Data informasi pelanggan dari sistem CRM.
 
-### **Silver Rules**
-- All names must start with the source system name, and table names must match their original names without renaming.
+### **Aturan Silver**
+- Sama seperti aturan Bronze: nama tabel diawali dengan nama sistem sumber dan tetap mengikuti nama asli tanpa diubah.
 - **`<sourcesystem>_<entity>`**  
-  - `<sourcesystem>`: Name of the source system (e.g., `crm`, `erp`).  
-  - `<entity>`: Exact table name from the source system.  
-  - Example: `crm_customer_info` → Customer information from the CRM system.
+  - `<sourcesystem>`: Nama sistem sumber (contoh: `crm`, `erp`)  
+  - `<entity>`: Nama tabel asli dari sistem sumber  
+  - Contoh: `crm_customer_info` → Data informasi pelanggan dari sistem CRM.
 
-### **Gold Rules**
-- All names must use meaningful, business-aligned names for tables, starting with the category prefix.
+### **Aturan Gold**
+- Gunakan nama tabel yang bermakna dan relevan dengan konteks bisnis, diawali dengan prefix kategori.
 - **`<category>_<entity>`**  
-  - `<category>`: Describes the role of the table, such as `dim` (dimension) or `fact` (fact table).  
-  - `<entity>`: Descriptive name of the table, aligned with the business domain (e.g., `customers`, `products`, `sales`).  
-  - Examples:
-    - `dim_customers` → Dimension table for customer data.  
-    - `fact_sales` → Fact table containing sales transactions.  
+  - `<category>`: Menunjukkan jenis tabel, seperti `dim` (dimension) atau `fact` (fact table)  
+  - `<entity>`: Nama deskriptif yang sesuai dengan domain bisnis (contoh: `customers`, `products`, `sales`)  
+  - Contoh:
+    - `dim_customers` → Tabel dimensi untuk data pelanggan  
+    - `fact_sales` → Tabel fakta berisi transaksi penjualan
 
-#### **Glossary of Category Patterns**
+#### **Glosarium Pola Penamaan Kategori**
 
-| Pattern     | Meaning                           | Example(s)                              |
-|-------------|-----------------------------------|-----------------------------------------|
-| `dim_`      | Dimension table                  | `dim_customer`, `dim_product`           |
-| `fact_`     | Fact table                       | `fact_sales`                            |
-| `report_`   | Report table                     | `report_customers`, `report_sales_monthly`   |
+| Pola        | Makna                              | Contoh                                   |
+|-------------|------------------------------------|------------------------------------------|
+| `dim_`      | Tabel dimensi                      | `dim_customer`, `dim_product`            |
+| `fact_`     | Tabel fakta                        | `fact_sales`                             |
+| `report_`   | Tabel laporan                      | `report_customers`, `report_sales_monthly`   |
 
-## **Column Naming Conventions**
+## **Standar Penamaan Kolom**
 
-### **Surrogate Keys**  
-- All primary keys in dimension tables must use the suffix `_key`.
+### **Surrogate Key**  
+- Setiap primary key di tabel dimensi harus menggunakan akhiran `_key`.
 - **`<table_name>_key`**  
-  - `<table_name>`: Refers to the name of the table or entity the key belongs to.  
-  - `_key`: A suffix indicating that this column is a surrogate key.  
-  - Example: `customer_key` → Surrogate key in the `dim_customers` table.
-  
-### **Technical Columns**
-- All technical columns must start with the prefix `dwh_`, followed by a descriptive name indicating the column's purpose.
+  - `<table_name>`: Nama tabel atau entitas yang dimaksud  
+  - `_key`: Menandakan bahwa ini adalah surrogate key  
+  - Contoh: `customer_key` → Surrogate key di tabel `dim_customers`
+
+### **Kolom Teknis**
+- Kolom sistem atau metadata harus diawali dengan prefix `dwh_` dan diikuti dengan nama deskriptif yang menjelaskan fungsinya.
 - **`dwh_<column_name>`**  
-  - `dwh`: Prefix exclusively for system-generated metadata.  
-  - `<column_name>`: Descriptive name indicating the column's purpose.  
-  - Example: `dwh_load_date` → System-generated column used to store the date when the record was loaded.
- 
+  - `dwh`: Prefix khusus untuk metadata sistem  
+  - `<column_name>`: Nama kolom yang menjelaskan tujuan kolom tersebut  
+  - Contoh: `dwh_load_date` → Kolom untuk mencatat tanggal pemuatan data ke warehouse
+
 ## **Stored Procedure**
 
-- All stored procedures used for loading data must follow the naming pattern:
-- **`load_<layer>`**.
+- Stored procedure untuk pemuatan data harus mengikuti pola penamaan:
+- **`load_<layer>`**
   
-  - `<layer>`: Represents the layer being loaded, such as `bronze`, `silver`, or `gold`.
-  - Example: 
-    - `load_bronze` → Stored procedure for loading data into the Bronze layer.
-    - `load_silver` → Stored procedure for loading data into the Silver layer.
+  - `<layer>`: Menunjukkan layer tujuan, seperti `bronze`, `silver`, atau `gold`  
+  - Contoh:  
+    - `load_bronze` → Prosedur untuk memuat data ke layer Bronze  
+    - `load_silver` → Prosedur untuk memuat data ke layer Silver
