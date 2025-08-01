@@ -1,17 +1,17 @@
 # Proyek Data Warehouse
 
-Selamat datang di repositori **Data Warehouse**! 🚀  
+Selamat datang di repositori **SQL Data Warehouse**! 🚀  
 Proyek ini merupakan upaya pembelajaran saya dalam memahami konsep dan implementasi dasar **data warehousing**, mulai dari membangun gudang data sederhana untuk menghasilkan insight awal dari data. Proyek ini dibuat sebagai bagian dari portofolio pribadi, dengan mengacu pada praktik umum di bidang **data engineering** dan **analitik**.
 
 ---
 
 ## 🏗️ Arsitektur Data
 
-Arsitektur data proyek ini mengikuti pendekatan Medallion Architecture dengan tiga lapisan: **Bronze**, **Silver**, dan **Gold**.
+Arsitektur data proyek ini mengikuti pendekatan Medallion Architecture dengan tiga layer: **Bronze**, **Silver**, dan **Gold**.
 ![Data Architecture](docs/data_architecture.png)
 
 1. **Bronze Layer**: Menyimpan data mentah langsung dari sistem sumber. Data diambil dari file CSV dan dimasukkan ke dalam SQL Server Database.
-2. **Silver Layer**: Lapisan ini mencakup proses pembersihan data (cleansing), standarisasi, dan normalisasi sebelum dianalisis.
+2. **Silver Layer**: Layer ini mencakup proses pembersihan data (cleansing), standarisasi, dan normalisasi sebelum dianalisis.
 3. **Gold Layer**: Menyimpan data yang siap pakai secara bisnis, dimodelkan dalam bentuk *star schema* untuk keperluan pelaporan dan analisis.
 
 ---
@@ -21,21 +21,12 @@ Arsitektur data proyek ini mengikuti pendekatan Medallion Architecture dengan ti
 Proyek ini mencakup:
 
 1. **Arsitektur Data**: Mendesain data warehouse modern menggunakan Medallion Architecture (**Bronze**, **Silver**, **Gold**).
-2. **ETL Pipelines**: Proses ekstraksi, transformasi, dan pemuatan data dari sistem sumber ke dalam warehouse.
+2. **ETL Pipelines**: Proses ekstraksi, transformasi, dan pemuatan data dari sistem sumber ke dalam Data warehouse.
 3. **Pemodelan Data**: Mengembangkan tabel fakta dan dimensi yang dioptimalkan untuk Query analitik.
 4. **Analitik & Pelaporan**: Berikut adalah repositori lanjutan untuk analitik dan membuat laporan.
 
    [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/afrijalrasya/SQL-data-analytics-project)
 
----
-
-## 🛠️ Tautan & Alat Penting
-
-Semua sumber daya GRATIS!
-- **[Datasets](datasets/):** Akses ke dataset proyek (file CSV).
-- **[SQL Server Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads):** Server ringan untuk menjalankan database SQL.
-- **[SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16):** Antarmuka GUI untuk mengelola database.
-- **[DrawIO](https://www.drawio.com/):** Mendesain arsitektur data, model, alur ETL, dan diagram lainnya.
 ---
 
 ## 🚀 Spesifikasi Proyek
@@ -88,7 +79,7 @@ Halo! Saya **Afrijal Rasya Putra**, seorang **mahasiswa Informatika** yang sedan
 - **SQL** dan dasar-dasar manipulasi data
 - Konsep dasar **ETL** dan alur kerja data pipeline
 
-Saya senang belajar dan mengeksplorasi hal-hal baru, terutama yang berkaitan dengan data. Saat ini saya sedang membangun keterampilan secara bertahap dan terus mencari peluang untuk berkembang. Saya juga terbuka untuk **magang** atau **proyek kolaboratif** yang bisa memberi saya pengalaman langsung dan membantu proses belajar saya.
+Saya senang belajar dan mengeksplorasi hal-hal baru, terutama yang berkaitan dengan data. Saat ini saya sedang membangun keterampilan secara bertahap dan terus mencari peluang bergabung ke dalam industri untuk memberi saya pengalaman nyata dalam bidang ini.
 
 📫 Jangan ragu untuk terhubung atau berdiskusi—saya senang bisa belajar dan berkembang bersama!
 
