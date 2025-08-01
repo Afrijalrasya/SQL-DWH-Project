@@ -7,28 +7,28 @@ Metode dan teknik ETL (Extract, Transform, Load) yang digunakan dalam proyek ini
 ## 🟦 1. Extract (Ekstraksi)
 
 - **Metode Ekstrak**: Pull Extract  
-  Data ditarik langsung dari sumber (misalnya API, database, atau file sistem).
+  Data ditarik langsung dari sumber (file sistem).
 
 - **Tipe Ekstrak**: Full Extract  
   Seluruh data diambil setiap kali proses dijalankan, tanpa mempertimbangkan perubahan sebelumnya.
 
 - **Teknik Ekstrak**: File Parsing  
-  Ekstraksi dilakukan dengan membaca dan mem-parsing file (seperti CSV, JSON, atau Excel).
+  Ekstraksi dilakukan dengan membaca dan mem-parsing file (CSV).
 
 ---
 
-## 🟧 2. Transform (Transformasi)
+## 🟧 2. Transform 
 
 Transformasi data dilakukan untuk membersihkan, mengkonsolidasikan, dan menyesuaikan data agar sesuai dengan kebutuhan analitik atau pelaporan. Proses transformasi meliputi:
 
-### 🔹 Pembersihan Data (Data Cleansing)
-- Menghapus duplikat (Remove Duplicates)
-- Penyaringan data (Data Filtering)
-- Menangani data hilang (Handling Missing Data)
-- Menangani nilai tidak valid (Handling Invalid Values)
-- Menangani spasi yang tidak diinginkan (Handling Unwanted Spaces)
-- Deteksi outlier (Outlier Detection)
-- Pengubahan tipe data (Data Type Casting)
+### 🔹 Pembersihan Data 
+- Menghapus duplikat
+- Penyaringan data
+- Menangani data yang hilang 
+- Menangani nilai yang tidak valid 
+- Menangani spasi yang tidak diinginkan
+- Deteksi outlier
+- Pengubahan tipe data 
 
 ### 🔹 Transformasi Umum
 - **Data Enrichment**: Penambahan informasi atau data tambahan.
@@ -52,8 +52,3 @@ Transformasi data dilakukan untuk membersihkan, mengkonsolidasikan, dan menyesua
   Perubahan pada data historis langsung ditimpa dengan nilai baru (tidak menyimpan riwayat perubahan).
 
 ---
-
-## 📌 Catatan Tambahan
-
-Dokumentasi ini dapat diperluas sesuai kebutuhan proyek, seperti menambahkan jadwal ETL, monitoring log, atau integrasi ke data warehouse.
-
