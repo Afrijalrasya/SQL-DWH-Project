@@ -18,7 +18,7 @@ Arsitektur data proyek ini mengikuti pendekatan Medallion Architecture dengan ti
 
 ## 📖 Ringkasan Proyek
 
-Proyek ini mencakup:
+Proyek ini mencakup :
 
 1. **Arsitektur Data**: Mendesain data warehouse modern menggunakan Medallion Architecture (**Bronze**, **Silver**, **Gold**).
 2. **ETL Pipelines**: Proses ekstraksi, transformasi, dan pemuatan data dari sistem sumber ke dalam Data warehouse.
