@@ -4,10 +4,10 @@ Quality Checks
 ===============================================================================
 Tujuan script:
     - Script ini melakukan pemeriksaan kualitas untuk memvalidasi integritas, konsistensi,
-      dan akurasi Gold layer. Pemeriksaan ini memastikan:
+ dan akurasi Gold layer. Pemeriksaan ini memastikan:
     - Keunikan surrogate key(key pengganti) di dalam tabel dimensi.
-    - Integritas referensial antara tabel fakta dan tabel dimensi.
-    - Validasi hubungan dalam model data untuk tujuan analisis.
+    - Integrity referensial antara tabel fakta dan tabel dimensi.
+    - Validate the data from the model and the analysis.
 
 Catatan penggunaan:
     - Mencari dan menyelesaikan setiap ketidaksesuaian data yang ditemukan selama pemeriksaan
@@ -19,6 +19,8 @@ Catatan penggunaan:
 -- ====================================================================
 -- Memeriksa keunikan dari Customer Key pada dimensi customer
 -- Ekspektasi: Tidak ada hasil
+
+
 SELECT 
     customer_key,
     COUNT(*) AS duplicate_count
