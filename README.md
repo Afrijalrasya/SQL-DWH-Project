@@ -1,86 +1,88 @@
 # Proyek Data Warehouse
 
-Selamat datang di repositori **SQL Data Warehouse**! 🚀  
-Proyek ini merupakan upaya pembelajaran saya dalam memahami konsep dan implementasi dasar **data warehousing**, mulai dari membangun gudang data sederhana untuk menghasilkan insight awal dari data. Proyek ini dibuat sebagai bagian dari portofolio pribadi, dengan mengacu pada praktik umum di bidang **data engineering** dan **analitik**.
+Welcome to the **SQL Data Warehouse** repository! 🚀 
+This project is my learning effort in understanding the basic concepts and implementation of **data warehousing**, starting from building a simple data warehouse to generating initial insights from the data. This project was created as part of a personal portfolio, with reference to common practices in the field of **data engineering** and **analytics**.
+
 
 ---
 
 ## 🏗️ Arsitektur Data
 
-Arsitektur data proyek ini mengikuti pendekatan Medallion Architecture dengan tiga layer: **Bronze**, **Silver**, dan **Gold**.
+The data architecture of this project follows the Medallion Architecture approach with three layers: **Bronze**, **Silver**, and **Gold**.
 ![Data Architecture](docs/data_architecture.png)
 
-1. **Bronze Layer**: Menyimpan data mentah langsung dari sistem sumber. Data diambil dari file CSV dan dimasukkan ke dalam SQL Server Database.
-2. **Silver Layer**: Layer ini mencakup proses pembersihan data (cleansing), standarisasi, dan normalisasi sebelum dianalisis.
-3. **Gold Layer**: Menyimpan data yang siap pakai secara bisnis, dimodelkan dalam bentuk *star schema* untuk keperluan pelaporan dan analisis.
+1. **Bronze Layer**: Stores raw data directly from the source system. The data is retrieved from a CSV file and inserted into a SQL Server Database.
+2. **Silver Layer**: This layer includes cleansing, standardization, and normalization before analysis.
+3. **Gold Layer**: Stores business-ready data, modeled in the form of a *star schema* for reporting and analysis purposes.
 
 ---
 
-## 📖 Ringkasan Proyek
+## 📖 Project Summary
 
-Proyek ini mencakup :
+This project includes:
 
-1. **Arsitektur Data**: Mendesain data warehouse modern menggunakan Medallion Architecture (**Bronze**, **Silver**, **Gold**).
-2. **ETL Pipelines**: Proses ekstraksi, transformasi, dan pemuatan data dari sistem sumber ke dalam Data warehouse.
-3. **Pemodelan Data**: Mengembangkan tabel fakta dan dimensi yang dioptimalkan untuk Query analitik.
-4. **Analitik & Pelaporan**: Berikut adalah repositori lanjutan untuk analitik dan membuat laporan.
+1. **Data Architecture**: Design a modern data warehouse using Medallion Architecture (**Bronze**, **Silver**, **Gold**).
+2. **ETL Pipelines**: The process of extracting, transforming, and loading data from source systems into the data warehouse.
+3. **Data Modeling**: Developing fact tables and dimensions optimized for analytical Query.
+4. **Analytics & Reporting**: Here is an advanced repository for analytics and creating reports.
+
 
    [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/afrijalrasya/SQL-data-analytics-project)
 
 ---
 
-## 🚀 Spesifikasi Proyek
+## 🚀 Project Specifications
 
-### Membangun mini Data Warehouse 
+### Building Data Warehouse
 
-#### Tujuan
-Mengembangkan data warehouse skala kecil menggunakan SQL Server untuk mengonsolidasikan data penjualan, sehingga dapat dilakukan pelaporan dan pengambilan keputusan berbasis data.
+#### Objective
+Develop a small-scale data warehouse using SQL Server to consolidate sales data, so that data-based reporting and decision-making can be done.
 
 #### Spesifikasi
-- **Sumber Data**: Data diimpor dari dua sistem sumber (ERP dan CRM) dalam bentuk file CSV.
-- **Kualitas Data**: Melakukan pembersihan dan perbaikan kualitas data sebelum dianalisis.
-- **Integrasi**: Menggabungkan kedua sumber menjadi satu model data yang mudah digunakan untuk keperluan analitik.
-- **Ruang Lingkup**: Fokus pada dataset terbaru saja, tidak mencakup historisasi data.
-- **Dokumentasi**: Menyediakan dokumentasi model data secara jelas untuk mendukung kebutuhan tim bisnis dan analitik.
---
+- **Source Data**: Data is imported from two source systems (ERP and CRM) in the form of CSV files.
+- Data Quality**: Performed data quality cleaning and improvement before analysis.
+- **Integration**: Combined both sources into one data model that is easy to use for analytics purposes.
+- Scope**: Focuses on recent datasets only, does not include historical data.
+- Documentation**: Provide clear data model documentation to support the needs of business and analytics teams.
+
+
 ## 📂 Repository Structure
 ```
 data-warehouse-project/
 │
-├── datasets/                           # Dataset mentah yang digunakan dalam proyek (data ERP dan CRM)
+├── datasets/                           # Raw datasets used in the project (ERP and CRM data)
 │
-├── docs/                               # Dokumentasi proyek dan detail arsitektur
-│   ├── etl.drawio                      # File Draw.io yang menampilkan berbagai teknik dan metode ETL
-│   ├── data_architecture.drawio        # File Draw.io yang menggambarkan arsitektur proyek
-│   ├── data_catalog.md                 # Katalog dataset, termasuk deskripsi field dan metadata
-│   ├── data_flow.drawio                # Diagram alur data dalam format Draw.io
-│   ├── data_models.drawio              # File Draw.io untuk model data (star schema)
-│   ├── naming-conventions.md           # Panduan penamaan yang konsisten untuk tabel, kolom, dan file
+├── docs/                               # Project documentation and architectural details
+│   ├── etl.drawio                      # Draw.io file that displays various ETL techniques and methods
+│   ├── data_architecture.drawio        # Draw.io file that describes the project architecture
+│   ├── data_catalog.md                 # Dataset catalog, including field descriptions and metadata
+│   ├── data_flow.drawio                # Data flowchart in Draw.io format
+│   ├── data_models.drawio              # Draw.io file for the data model (star schema)
+│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
 │
-├── scripts/                            # Skrip SQL untuk proses ETL dan transformasi
-│   ├── bronze/                         # Skrip untuk ekstraksi dan pemuatan data mentah
-│   ├── silver/                         # Skrip untuk pembersihan dan transformasi data
-│   ├── gold/                           # Skrip untuk membangun model analitik
+├── scripts/                            # SQL scripts for ETL and transformation processes
+│   ├── bronze/                         # Scripts for raw data extraction and loading
+│   ├── silver/                         # Scripts for data cleaning and transformation
+│   ├── gold/                           # Scripts for building analytic models
 │
-├── tests/                              # Skrip pengujian dan file pengecekan kualitas data
+├── tests/                              # Test scripts and data quality check files
 │
-├── README.md                           # Ringkasan proyek dan panduan penggunaan
-├── LICENSE                             # Informasi lisensi untuk repositori ini
-
+├── README.md                           # Project summary and usage guide
+├── LICENSE                             # License information for this repository
 ```
 ---
 
 ## 🌟 Tentang Saya
 
-Halo! Saya **Afrijal Rasya Putra**, seorang **mahasiswa Informatika** yang sedang tertarik mendalami dunia **Data Engineering**. Meskipun masih di awal perjalanan kuliah, saya sangat antusias belajar tentang bagaimana data diproses dan diubah menjadi informasi yang bermakna.
+Hello, I am **Afrijal Rasya Putra**, an Informatics student who is interested in exploring the world of **Data Engineering**. Although it's still early in my college journey, I'm excited to learn about how data is processed and turned into meaningful information.
 
-📌 Saat ini saya sedang belajar:
-- Pemrograman **Python**
-- **SQL** dan dasar-dasar manipulasi data
-- Konsep dasar **ETL** dan alur kerja data pipeline
+📌 I am currently learning:
+- **Python** programming
+- **SQL** and the basics of data manipulation
+- Basic concepts of **ETL** and data pipeline workflows
 
-Saya senang belajar dan mengeksplorasi hal-hal baru, terutama yang berkaitan dengan data. Saat ini saya sedang membangun keterampilan secara bertahap dan terus mencari peluang bergabung ke dalam industri untuk memberi saya pengalaman nyata dalam bidang ini.
+I love learning and exploring new things, especially those related to data. I'm currently building my skills gradually and looking for opportunities to join the industry to give me real experience in this field.
 
-📫 Jangan ragu untuk terhubung atau berdiskusi—saya senang bisa belajar dan berkembang bersama!
+📫 Feel free to connect or discuss-I'd love to learn and grow together!
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/afrijalrasyaputra/)
