@@ -1,54 +1,57 @@
-# Metode ETL
+# ETL Methods
 
-Metode dan teknik ETL (Extract, Transform, Load) yang digunakan dalam proyek ini. Proses ETL terdiri dari tiga tahap utama: **Extract (Ekstraksi)**, **Transform (Transformasi)**, dan **Load (Pemuatan)**.
-
----
-
-## 🟦 1. Extract (Ekstraksi)
-
-- **Metode Ekstrak**: Pull Extract  
-  Data ditarik langsung dari sumber (file sistem).
-
-- **Tipe Ekstrak**: Full Extract  
-  Seluruh data diambil setiap kali proses dijalankan, tanpa mempertimbangkan perubahan sebelumnya.
-
-- **Teknik Ekstrak**: File Parsing  
-  Ekstraksi dilakukan dengan membaca dan mem-parsing file (CSV).
+ETL (Extract, Transform, Load) methods and techniques used in this project. The ETL process consists of three main stages: **Extract,** **Transform,** and **Load,**.
 
 ---
 
-## 🟧 2. Transform 
+## 🟦 1. Extract
 
-Transformasi data dilakukan untuk membersihkan, mengkonsolidasikan, dan menyesuaikan data agar sesuai dengan kebutuhan analitik atau pelaporan. Proses transformasi meliputi:
+- **Extract Method**: Pull Extract 
+ Data is pulled directly from the source (system file).
 
-### 🔹 Pembersihan Data 
-- Menghapus duplikat
-- Penyaringan data
-- Menangani data yang hilang 
-- Menangani nilai yang tidak valid 
-- Menangani spasi yang tidak diinginkan
-- Deteksi outlier
-- Pengubahan tipe data 
+- **Extract Type**: Full Extract 
+ All data is retrieved each time the process is run, without considering previous changes.
 
-### 🔹 Transformasi Umum
-- **Data Enrichment**: Penambahan informasi atau data tambahan.
-- **Data Integration**: Penggabungan dari beberapa sumber data.
-- **Derived Columns**: Membuat kolom baru dari kolom yang sudah ada.
-- **Normalisasi & Standarisasi**: Mengatur nilai agar berada pada skala yang konsisten.
-- **Business Rules & Logic**: Menerapkan logika dan aturan bisnis sesuai kebutuhan.
-- **Data Aggregation**: Pengelompokan dan perhitungan agregat (seperti sum, average).
+- Extract Technique**: File Parsing 
+ Extraction is performed by reading and parsing a (CSV) file.
+---
+
+## Transform
+
+Data transformation is performed to clean, consolidate, and customize data to fit analytic or reporting needs. The transformation process includes:
+
+### 🔹 Data Cleaning
+- Removing duplicates
+- Data filtering
+- Handling missing data
+- Handling invalid values
+- Handling unwanted spaces
+- Outlier detection
+- Data type conversion
+
+### 🔹 General Transformation
+- **Data Enrichment**: Addition of additional information or data.
+- **Data Integration**: Merging of multiple data sources.
+- Derived Columns**: Creating new columns from existing columns.
+- **Normalization & Standardization**: Organizing values to be on a consistent scale.
+- **Business Rules & Logic**: Apply business logic and rules as needed.
+- **Data Aggregation**: Grouping and aggregate calculations (such as sum, average).
+
+
 
 ---
 
-## 🟩 3. Load (Pemuatan)
+## 🟩 3. Load
 
-- **Tipe Pemrosesan**: Batch Processing  
-  Data dimuat secara berkala dalam jumlah besar pada waktu tertentu.
+- **Processing Type**: Batch Processing 
+ Data is loaded periodically in large amounts at specific times.
 
-- **Metode Load**: Full Load (Truncate & Insert)  
-  Tabel target dikosongkan terlebih dahulu (truncate) lalu seluruh data dimuat ulang (insert).
+- **Load Method**: Full Load (Truncate & Insert) 
+ The target table is first emptied (truncate) and then all data is reloaded (insert).
 
-- **Slowly Changing Dimension (SCD)**: Type 1 – Overwrite  
-  Perubahan pada data historis langsung ditimpa dengan nilai baru (tidak menyimpan riwayat perubahan).
+- **Slowly Changing Dimension (SCD)**: Type 1 - Overwrite 
+ Changes to historical data are immediately overwritten with new values (no change history is kept).
+
+
 
 ---
