@@ -3,23 +3,16 @@
 Quality Checks
 ===============================================================================
 Tujuan script:
-    - Script ini melakukan pemeriksaan kualitas untuk memvalidasi integritas, konsistensi,
- dan akurasi Gold layer. Pemeriksaan ini memastikan:
-    - Keunikan surrogate key(key pengganti) di dalam tabel dimensi.
-    - Integrity referensial antara tabel fakta dan tabel dimensi.
+    - This script performs quality checks to validate the integrity, consistency,
+ and accuracy of the Gold layer. This check ensures:
+    - Uniqueness of surrogate keys in the dimension table.
+    - Referential integrity between fact tables and dimension tables.
     - Validate the data from the model and the analysis.
 
-Catatan penggunaan:
-    - Mencari dan menyelesaikan setiap ketidaksesuaian data yang ditemukan selama pemeriksaan
+Usage records:
+    - Find and resolve any data mismatches found during the check
 ===============================================================================
 */
-
--- ====================================================================
--- Mengecek 'gold.dim_customers'
--- ====================================================================
--- Memeriksa keunikan dari Customer Key pada dimensi customer
--- Ekspektasi: Tidak ada hasil
-
 
 SELECT 
     customer_key,
@@ -29,10 +22,10 @@ GROUP BY customer_key
 HAVING COUNT(*) > 1;
 
 -- ====================================================================
--- Mengecek 'gold.product_key'
+-- Checking 'gold.product_key'
 -- ====================================================================
--- Memeriksa keunikan dari Product Key dalam dimensi produk
--- Ekspektasi: Tidak ada hasil
+-- Checks the uniqueness of the Product Key in the product dimension
+-- Expectation: No result
 SELECT 
     product_key,
     COUNT(*) AS duplicate_count
@@ -41,9 +34,9 @@ GROUP BY product_key
 HAVING COUNT(*) > 1;
 
 -- ====================================================================
--- Mengecek 'gold.fact_sales'
+-- Checking 'gold.fact_sales'
 -- ====================================================================
--- Memeriksa konektivitas model data antara fakta dan dimensi
+-- Checking connectivity of data model between fact and dimensi 
 SELECT * 
 FROM gold.fact_sales f
 LEFT JOIN gold.dim_customers c
