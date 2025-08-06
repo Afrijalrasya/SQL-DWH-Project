@@ -1,27 +1,29 @@
 /*
 ===============================================================================
-Mengecek kualitas data
+Checking data quality
 ===============================================================================
-Tujuan script:
-    Script ini melakukan pemeriksaan kualitas data seperti konsistensi, akurasi, 
-    dan standarisasi data pada 'silver' layer. Pemeriksaan yang dilakukan meliputi:
-    - Primary key yang kosong atau duplikat.
-    - Spasi yang tidak diinginkan pada string.
-    - Standarisasi dan konsistensi data.
-    - Rentang tanggal dan urutan yang tidak valid.
-    - Konsistensi data antara field yang terkait.
+Script purpose:
+    This script performs data quality checks such as consistency, accuracy, 
+ and data standardization on the 'silver' layer. The checks performed include:
+    - Empty or duplicate primary keys.
+    - Unwanted spaces in strings.
+    - Data standardization and consistency.
+    - Invalid date ranges and sequences.
+    - Data consistency between related fields.
 
-Catatan penggunaan:
-    - Jalankan Pemeriksaan ini setelah data di-load ke dalam Silver layer
-    - Cari dan selesaikan ketidaksesuaian yang ditemukan selama pemeriksaan.
+Usage :
+    - Run this check after the data has been loaded into the Silver layer.
+    - Look for and resolve any discrepancies found during the check.
 ===============================================================================
 */
 
+
+
 -- ====================================================================
--- Mengecek 'silver.crm_cust_info'
--- ====================================================================
--- Memeriksa Primar key yang kosong atau duplikat
--- Ekspektasi: Tidak ada hasil
+-- Checking 'silver.crm_cust_info'
+-- ======================================================================
+-- Checking for empty or duplicate primary keys
+-- Expected: No results
 SELECT 
     cst_id,
     COUNT(*) 
